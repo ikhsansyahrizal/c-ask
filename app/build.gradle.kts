@@ -59,8 +59,10 @@ dependencies {
 
     //Navigation
     val navigation_version = "2.6.0"
-    implementation ("androidx.navigation:navigation-fragment-ktx:$navigation_version")
-    implementation ("androidx.navigation:navigation-ui-ktx:$navigation_version")
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.7.7")
+    implementation ("androidx.fragment:fragment-ktx:1.7.1")
+
 
     //hilt
     implementation ("com.google.dagger:hilt-android:2.48")
@@ -101,9 +103,14 @@ dependencies {
     testImplementation ("androidx.arch.core:core-testing:2.1.0")
 
 
-    //Firebase
-    val firebase = "30.5.0"
-    implementation ("com.google.firebase:firebase-bom:${firebase}")
-    implementation ("com.google.firebase:firebase-messaging-ktx:23.0.0")
+//    //Firebase
+//    val firebase = "30.5.0"
+//    implementation ("com.google.firebase:firebase-bom:${firebase}")
+//    implementation ("com.google.firebase:firebase-messaging-ktx:23.0.0")
+//
+
+    //recylerview
+    implementation ("androidx.appcompat:appcompat:1.6.1")
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
 
 }
