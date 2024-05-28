@@ -120,10 +120,13 @@
             android:textSize="16sp" />
 
         <Spinner
-            android:layout_width="wrap_content"
+            android:id="@+id/option1"
+            android:entries="@array/list_option_1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center"/>
+            android:layout_weight="1"/>
 
 
     </LinearLayout>
@@ -148,12 +151,17 @@
             android:textSize="16sp" />
 
         <Spinner
-            android:layout_width="wrap_content"
+            android:id="@+id/option2"
+            android:entries="@array/list_option_2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
 
     </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/LayoutOption3"
@@ -175,13 +183,16 @@
             android:textSize="16sp" />
 
         <Spinner
-            android:layout_width="wrap_content"
+            android:id="@+id/option3"
+            android:entries="@array/list_option_3"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"/>
 
 
     </LinearLayout>
-
 
     <ImageView
         android:id="@+id/imageView"

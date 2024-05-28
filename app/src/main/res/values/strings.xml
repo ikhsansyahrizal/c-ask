@@ -11,4 +11,38 @@
         <item>img_fasilitas_umum</item>
         <item>img_petunjuk_arah</item>
     </string-array>
+
+
+
+
+
+    <string-array name="list_option_1">
+        <item>Select</item>
+        <item>Bogor</item>
+        <item>Manggarai</item>
+        <item>Jakarta Kota</item>
+    </string-array>
+
+    <string-array name="list_option_2">
+        <item>Select</item>
+        <item>Hall Timur</item>
+        <item>Hall Barat</item>
+        <item>Peron 1/2</item>
+        <item>Peron 3/4</item>
+        <item>Peron 7/8</item>
+        <item>Peron 9/10</item>
+        <item>Peron 11/12</item>
+    </string-array>
+
+    <string-array name="list_option_3">
+        <item>Select</item>
+        <item>Hall Barat</item>
+        <item>Lin Depok/Bogor</item>
+        <item>Lin Bekasi/Cikarang</item>
+        <item>Lin Jakarta Kota</item>
+        <item>Lin Rangkasbitung</item>
+        <item>Lin Tangerang</item>
+        <item>Lin Tanjung Priok</item>
+    </string-array>
+
 </resources>
