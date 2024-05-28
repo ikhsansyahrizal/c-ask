@@ -1,5 +1,6 @@
 package com.example.c_ask.feature.ui.home
 
+import androidx.navigation.fragment.findNavController
 import com.example.c_ask.R
 import com.example.c_ask.base.BaseFragment
 import com.example.c_ask.databinding.FragmentHomeBinding
@@ -11,18 +12,23 @@ class FragmentHome : BaseFragment<FragmentHomeBinding>() {
 
     override fun init() {
 
-        val imageFeatures = getImageFeatures()
-        homeAdapter = HomeAdapter(requireContext(), imageFeatures)
+        val listImage = getImageFeatures()
+        homeAdapter = HomeAdapter(requireContext(), listImage)
         binding.rvHomePage.adapter = homeAdapter
+
+        binding.textView.setOnClickListener {
+            findNavController().navigate(FragmentHomeDirections.actionFragmentHomeToFragmentDirectionAssitant())
+        }
     }
 
 
     private fun getImageFeatures(): List<ImageFeature> {
-        return resources.getStringArray(R.array.image_feature)
-            .map { imageName ->
-                val resId = resources.getIdentifier(imageName, "drawable", requireContext().packageName)
-                ImageFeature(resId)
-            }
+        val imageResIds = listOf(
+            R.drawable.img_petunjuk_arah,
+            R.drawable.img_fasilitas_umum,
+            R.drawable.img_petunjuk_arah
+        )
+        return imageResIds.map { ImageFeature(it) }
     }
 
 }
