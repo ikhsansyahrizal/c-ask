@@ -2,4 +2,13 @@
     <string name="app_name">c-ask</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="direction_assis_description1">Untuk dapat membantu anda, silahkan pilih lokasi dan posisi dibawah ini.</string>
+    <string name="direction_assis_description2">To be able to assist you, please select the location and position below.</string>
+    <string name="lokasi_anda_your_location">Lokasi Anda: \n <i>Your Location:</i></string>
+
+    <string-array name="image_feature">
+        <item>img_petunjuk_arah</item>
+        <item>img_fasilitas_umum</item>
+        <item>img_petunjuk_arah</item>
+    </string-array>
 </resources>

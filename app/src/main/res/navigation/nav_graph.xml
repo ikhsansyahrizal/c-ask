@@ -3,15 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/fragmentLogin">
+    app:startDestination="@id/fragmentAuth">
 
     <fragment
         android:id="@+id/fragmentHome"
         android:name="com.example.c_ask.feature.ui.home.FragmentHome"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentDirectionAssitant"
+            app:destination="@id/fragmentDirectionAssitant" />
+    </fragment>
     <fragment
-        android:id="@+id/fragmentLogin"
-        android:name="FragmentLogin"
-        android:label="FragmentLogin" />
+        android:id="@+id/fragmentAuth"
+        android:name="com.example.c_ask.feature.ui.auth.FragmentAuth"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" >
+        <action
+            android:id="@+id/action_fragmentAuth_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDirectionAssitant"
+        android:name="com.example.c_ask.feature.ui.directionAssist.FragmentDirectionAssitant"
+        android:label="fragment_direction_assitant"
+        tools:layout="@layout/fragment_direction_assitant" />
 </navigation>
