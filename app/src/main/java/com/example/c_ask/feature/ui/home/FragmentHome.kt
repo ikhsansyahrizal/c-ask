@@ -6,19 +6,16 @@ import com.example.c_ask.base.BaseFragment
 import com.example.c_ask.databinding.FragmentHomeBinding
 import com.example.c_ask.model.ImageFeature
 
-class FragmentHome : BaseFragment<FragmentHomeBinding>() {
+class FragmentHome : BaseFragment<FragmentHomeBinding>(), HomeAdapter.OnItemClickListener {
 
     private lateinit var homeAdapter: HomeAdapter
 
     override fun init() {
 
         val listImage = getImageFeatures()
-        homeAdapter = HomeAdapter(requireContext(), listImage)
+        homeAdapter = HomeAdapter(requireContext(), listImage, this)
         binding.rvHomePage.adapter = homeAdapter
 
-        binding.textView.setOnClickListener {
-            findNavController().navigate(FragmentHomeDirections.actionFragmentHomeToFragmentDirectionAssitant())
-        }
     }
 
 
@@ -31,4 +28,8 @@ class FragmentHome : BaseFragment<FragmentHomeBinding>() {
         return imageResIds.map { ImageFeature(it) }
     }
 
+    override fun onItemClicked(imageFeature: ImageFeature) {
+        // Handle the navigation based on the clicked item
+        findNavController().navigate(FragmentHomeDirections.actionFragmentHomeToFragmentDirectionAssitant())
+    }
 }
