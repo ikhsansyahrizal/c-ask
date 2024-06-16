@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".feature.ui.directionAssist.FragmentDirectionAssitant">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".feature.ui.fasilitasumum.FasilitasUmumFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginVertical="24dp"
         android:background="@drawable/border_reactangle_red"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="horizontal">
 
 
         <ImageView
@@ -39,44 +38,45 @@
 
     <ImageView
         android:id="@+id/btnBack"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="30dp"
-        android:src="@drawable/ic_arrow_back"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        android:src="@drawable/ic_arrow_back" />
 
     <TextView
         android:id="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="Bantuan Petunjuk Arah"
+        android:text="Bantuan Fasilitas Umum"
         android:textColor="@color/black"
         android:textSize="24dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btnBack"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Directional Assistance"
-        android:textColor="@color/black"
-        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Public Facilities Assistance"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="26dp"
@@ -85,32 +85,31 @@
         android:maxLines="2"
         android:text="@string/direction_assis_description1"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:layout_editor_absoluteX="24dp" />
 
     <TextView
         android:id="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:lines="2"
         android:maxLines="2"
         android:text="@string/direction_assis_description2"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        android:textSize="16sp" />
 
     <LinearLayout
         android:id="@+id/LayoutOption1"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="14dp"
         android:layout_marginTop="24dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5">
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="120dp"
@@ -122,43 +121,43 @@
 
         <Spinner
             android:id="@+id/option1"
-            android:entries="@array/list_option_1"
-            android:layout_gravity="center"
-            android:gravity="center"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:entries="@array/list_option_1"
+            android:gravity="center" />
 
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/LayoutOption2"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutOption1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="14dp"
         android:layout_marginTop="12dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/LayoutOption1">
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:lines="2"
-            android:text="@string/posisi_anda_your_position"
+            android:text="@string/lokasi_anda_your_location"
             android:textSize="16sp" />
 
         <Spinner
             android:id="@+id/option2"
-            android:entries="@array/list_option_2"
-            android:layout_gravity="center"
-            android:gravity="center"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:entries="@array/list_option_2"
+            android:gravity="center" />
 
 
     </LinearLayout>
@@ -166,74 +165,73 @@
 
     <LinearLayout
         android:id="@+id/LayoutOption3"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutOption2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="14dp"
         android:layout_marginTop="12dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/LayoutOption2">
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:lines="2"
-            android:text="@string/tujuan_anda_your_destination"
+            android:text="@null"
             android:textSize="16sp" />
 
         <Spinner
             android:id="@+id/option3"
-            android:entries="@array/list_option_3"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_width="100dp"
+            android:layout_width="106dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:entries="@array/list_option_3"
+            android:gravity="center" />
 
 
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="0dp"
         android:scaleType="fitXY"
-        android:src="@drawable/logo_karel_3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:src="@drawable/logo_karel_3" />
 
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.131"
         android:layout_width="180dp"
         android:layout_height="40dp"
         android:layout_gravity="bottom"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:layout_weight="1"
         android:background="@drawable/bg_button_red"
         android:text="Submit"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.91"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.131" />
+        android:textSize="22sp" />
 
     <ImageView
         android:id="@+id/imageView3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/img_rel"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+        android:src="@drawable/img_rel" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

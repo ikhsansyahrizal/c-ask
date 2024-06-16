@@ -12,14 +12,17 @@ import com.example.c_ask.model.ImageFeature
 class HomeAdapter(
     private val context: Context,
     private val imageFeature: List<ImageFeature>,
-    private val onItemClickListener: OnItemClickListener
 ) : RecyclerView.Adapter<HomeAdapter.ItemViewHolder>() {
 
-    interface OnItemClickListener {
-        fun onItemClicked(imageFeature: ImageFeature)
-    }
+    var goToPetunjukArah: ((String) -> Unit)? = null
+    var goToFasilitasUmum: ((String) -> Unit)? = null
+    var goToJadwalKrl: ((String) -> Unit)? = null
+    var goToPeta: ((String) -> Unit)? = null
+    var goToLostAndFound: ((String) -> Unit)? = null
 
-    class ItemViewHolder(val binding: RvHomeItemBinding) : RecyclerView.ViewHolder(binding.root)
+    class ItemViewHolder(val binding: RvHomeItemBinding) : RecyclerView.ViewHolder(binding.root) {
+
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val binding = RvHomeItemBinding.inflate(LayoutInflater.from(context), parent, false)
@@ -31,7 +34,13 @@ class HomeAdapter(
         Glide.with(context).load(imgFeature.imgPath).into(holder.binding.imgOption)
 
         holder.itemView.setOnClickListener {
-            onItemClickListener.onItemClicked(imgFeature)
+            when (position) {
+                0 -> goToPetunjukArah?.invoke("Parameter for Petunjuk Arah")
+                1 -> goToFasilitasUmum?.invoke("Parameter for Fasilitas Umum")
+                2 -> goToJadwalKrl?.invoke("Parameter for Jadwal KRL")
+                3 -> goToPeta?.invoke("Parameter for Peta")
+                4 -> goToLostAndFound?.invoke("Parameter for Lost and Found")
+            }
         }
     }
 

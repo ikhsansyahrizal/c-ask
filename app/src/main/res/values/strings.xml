@@ -5,15 +5,15 @@
     <string name="direction_assis_description1">Untuk dapat membantu anda, silahkan pilih lokasi dan posisi dibawah ini.</string>
     <string name="direction_assis_description2">To be able to assist you, please select the location and position below.</string>
     <string name="lokasi_anda_your_location">Lokasi Anda: \n <i>Your Location:</i></string>
+    <string name="tujuan_anda_your_destination">Tujuan Anda: \n <i>Your Destination:</i></string>
+    <string name="posisi_anda_your_position">Posisi Anda: \n <i>Your Position:</i></string>
+    <string name="naik_esklator_1">Naik eskalator\nUpstair with escalator \n\nKemudian Belok kiri \n And then turn left</string>
 
     <string-array name="image_feature">
         <item>img_petunjuk_arah</item>
         <item>img_fasilitas_umum</item>
         <item>img_petunjuk_arah</item>
     </string-array>
-
-
-
 
 
     <string-array name="list_option_1">
