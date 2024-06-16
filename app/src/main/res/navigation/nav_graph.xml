@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentAuth">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.c_ask.feature.ui.home.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentDirectionAssitant"
+            app:destination="@id/fragmentDirectionAssitant" />
+        <action
+            android:id="@+id/action_fragmentHome_to_jadwalKrlFragment"
+            app:destination="@id/jadwalKrlFragment" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fasilitasUmumFragment"
+            app:destination="@id/fasilitasUmumFragment" />
+        <action
+            android:id="@+id/action_fragmentHome_to_petaKrlFragment"
+            app:destination="@id/petaKrlFragment" />
+        <action
+            android:id="@+id/action_fragmentHome_to_lostAndFoundFragment"
+            app:destination="@id/lostAndFoundFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAuth"
+        android:name="com.example.c_ask.feature.ui.auth.FragmentAuth"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" >
+        <action
+            android:id="@+id/action_fragmentAuth_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDirectionAssitant"
+        android:name="com.example.c_ask.feature.ui.directionAssist.FragmentDirectionAssitant"
+        android:label="fragment_direction_assitant"
+        tools:layout="@layout/fragment_direction_assitant" >
+        <action
+            android:id="@+id/action_fragmentDirectionAssitant_to_fragmentDirectionResult"
+            app:destination="@id/fragmentDirectionResult" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDirectionResult"
+        android:name="com.example.c_ask.feature.ui.directionResult.FragmentDirectionResult"
+        android:label="fragment_direction_result"
+        tools:layout="@layout/fragment_direction_result" />
+    <fragment
+        android:id="@+id/fasilitasUmumFragment"
+        android:name="com.example.c_ask.feature.ui.fasilitasumum.FasilitasUmumFragment"
+        android:label="fragment_fasilitas_umum"
+        tools:layout="@layout/fragment_fasilitas_umum" />
+    <fragment
+        android:id="@+id/jadwalKrlFragment"
+        android:name="com.example.c_ask.feature.ui.jadwalkrl.JadwalKrlFragment"
+        android:label="fragment_jadwal_krl"
+        tools:layout="@layout/fragment_jadwal_krl" />
+    <fragment
+        android:id="@+id/petaKrlFragment"
+        android:name="com.example.c_ask.feature.ui.petaroute.PetaKrlFragment"
+        android:label="fragment_peta_krl"
+        tools:layout="@layout/fragment_peta_krl" />
+    <fragment
+        android:id="@+id/lostAndFoundFragment"
+        android:name="com.example.c_ask.feature.ui.lostandfound.LostAndFoundFragment"
+        android:label="fragment_lost_and_found"
+        tools:layout="@layout/fragment_lost_and_found" />
+</navigation>
